@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Todo App</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <main>
+      <!-- todo app header -->
+      <h2>Task App</h2>
+
+      <!-- dialog form for adding tasks -->
+      <dialog id="dialog-form">
+        <form action="" id="form" class="form">
+          <h2>Add new Task</h2>
+          <input type="text" name="task" id="task" placeholder="Enter task" />
+          <p id="taskerror" class="taskerror">Please input task</p>
+          <input type="date" name="calender" id="calender" />
+          <p id="calendererror" class="calendererror">Please input date</p>
+          <button id="addtask" class="addtask" type="submit">Add Task</button>
+          <button id="close-dialog" class="close-dialog">Cancel</button>
+        </form>
+      </dialog>
+
+      <!-- container list for all todo tasks -->
+      <div class="container" id="container"></div>
+    </main>
+
+    <!-- footer for add task button -->
+    <footer>
+      <button
+        id="show-dialog"
+        class="show-dialog"
+        command="show-modal"
+        commandfor="dialog-form"
+      >
+        Add Todo
+      </button>
+    </footer>
+
+    <!-- Javascript file -->
+    <script src="script.js"></script>
+  </body>
+</html>
